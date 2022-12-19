@@ -1,0 +1,21 @@
+.footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-grid-column-align: end;
+      justify-self: end;
+}
+.footer.style-1 {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5px;
+  background: #002310;
+}
+.footer.style-1 .logo {
+  width: 123px;
+  height: 77px;
+}

@@ -1,0 +1,34 @@
+body {
+  font-family: 'Magistral Book';
+  width: 100vw;
+  overflow-x: hidden;
+  color: #232326;
+  
+  &.mainPage {
+    background: #F0F0F3;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 100vh;
+  }
+}
+
+img {
+  width: -webkit-fill-available;
+}
+
+.container {
+  width: 100%;
+  padding: 0 150px;
+  margin: 0 auto;
+}
+
+.accent {
+  font-family: 'Magistral Book';
+  color: #00A94E;
+}
+
+.col-2 {
+  grid-column-start: 1;
+  grid-column-end: 3;
+}

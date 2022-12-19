@@ -1,0 +1,15 @@
+.footer {
+  display: flex;
+  justify-self: end;
+  &.style-1 {
+    justify-content: center;
+    align-items: center;
+    padding: 5px;
+    background: #002310;
+
+    .logo {
+      width: 123px;
+      height: 77px;
+    }
+  }
+}

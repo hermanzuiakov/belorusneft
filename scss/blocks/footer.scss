@@ -1,15 +1,39 @@
 .footer {
   display: flex;
   justify-self: end;
-  &.style-1 {
-    justify-content: center;
-    align-items: center;
-    padding: 5px;
-    background: #002310;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 5px;
+  background: #002310;
 
-    .logo {
-      width: 123px;
-      height: 77px;
+  .logo {
+    width: 123px;
+    height: 77px;
+  }
+
+  &.style-2 {
+    padding-bottom: 75px;
+  }
+
+  &-nav {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    gap: 45px 87px;
+    margin-top: 75px;
+
+    a {
+      font-family: 'Magistral';
+      line-height: 32px;
+      font-size: 27px;
+      text-transform: uppercase;
+      color: #F7F7FA;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration-line: underline;
+        color: #00A94E;
+      }
     }
   }
 }

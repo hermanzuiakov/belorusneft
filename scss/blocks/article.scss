@@ -1,5 +1,5 @@
 .article {
-  margin-top: 50px;
+  padding-top: 50px;
   position: relative;
   padding-bottom: 230px;
 
@@ -19,11 +19,13 @@
 
     &--text {
       font-family: 'Inter';
-      position: absolute;
+      /*position: absolute;*/
       max-width: 594px;
       bottom: 0;
       margin: 0;
       z-index: 100;
+      font-size: 26px;
+      margin-top: 54px;
     }
   }
 
@@ -56,26 +58,97 @@
     }
   }
 
+  &_photo {
+    background-size: auto !important;
+    background-position: 0 0 !important;
+    background-repeat: no-repeat !important;
+
+    .article_title {
+      height: 730px !important;
+
+      &--text {
+        color: #4E4E53;
+      }
+    }
+
+    &::after {
+      background: linear-gradient(180deg, rgba(253, 253, 253, 0) 77.59%, rgba(253, 253, 253, 0.74) 92.13%, #FDFDFD 100%);
+      content: "";
+      position: absolute;
+      width: 100vw;
+      height: 1177px;
+      top: 0;
+      z-index: 1;
+    }
+    * {
+      z-index: 10;
+    }
+  }
+
   .bosses_grid {
     margin-top: 250px;
-    padding: 0 289px;
+    padding: 0 155px;
     display: grid;
-    grid-template-columns: 411px 411px;
+    grid-template-columns: 1fr;
     gap: 110px 220px;
 
-    .bosses_name {
-      margin: 30px 0 20px;
-      font-size: 37px;
-      color: #232326;
-      font-weight: 400;
-    }
-    .bosses_date {
-      font-size: 37px;
-      color: #9A99A2;
+    &--element {
+      display: grid;
+      padding: 15px 150px 15px 15px;
+      background: #ffffff;
+      grid-template-columns: 435px 100%;
+      gap: 84px;
+      align-items: center;
+      position: relative;
+      filter: drop-shadow(-61px 107px 49px rgba(0, 0, 0, 0.01)) drop-shadow(-34px 60px 42px rgba(0, 0, 0, 0.05)) drop-shadow(-15px 27px 31px rgba(0, 0, 0, 0.09)) drop-shadow(-4px 7px 17px rgba(0, 0, 0, 0.1)) drop-shadow(0px 0px 0px rgba(0, 0, 0, 0.1));
+
+      &::after {
+        content: "";
+        display: block;
+        width: 155px;
+        height: 29px;
+        background: url("../img/logo.png") no-repeat;
+        background-size: cover;
+        position: absolute;
+        top: 16px;
+        right: 20px;
+      }
     }
 
-    img {
-      box-shadow: 0px 8px 8px rgba(50, 50, 71, 0.08), 0px 8px 16px rgba(50, 50, 71, 0.06);
+    .bosses_name {
+      font-weight: 400;
+      font-size: 39px;
+      color: #00A94E;
+      max-width: 694px;
+      margin: 0 0 20px;
+    }
+    .bosses_date {
+      font-size: 39px;
+      color: #9A99A2;
+      margin-bottom: 40px;
+      display: block;
+    }
+    .bosses_permission {
+      font-family: 'Inter';
+      font-size: 25px;
+      color: #232326;
+      max-width: 628px;
+      display: block;
+    }
+  }
+
+  &_pochetnie {
+    background: url("../img/pochetnie_bg.png");
+
+    .article_title {
+      h1 {
+        font-size: 95px;
+        display: block;
+        max-width: 1062px;
+      }
+    }
+    * {
+      z-index: 10;
     }
   }
 
@@ -116,6 +189,10 @@
     }
   }
 
+  &_elektro {
+    background: url("../img/elektro_bg.png");
+  }
+
   .article_electro {
     margin-top: 150px;
     display: grid;
@@ -150,6 +227,29 @@
         line-height: 150%;
         color: #232326;
       }
+    }
+  }
+
+  &_rewards {
+    .article_title {
+      height: 650px;
+    }
+    &::after {
+      z-index: 1;
+      width: 100vw;
+      height: 890px;
+      content: "";
+      display: block;
+      top: 0;
+      right: 0;
+      position: absolute;
+
+      background: url("../img/rewards_bg.png") no-repeat center center;
+      background-size: cover;
+    }
+
+    * {
+      z-index: 100;
     }
   }
 
@@ -242,16 +342,16 @@
       position: absolute;
       width: 66vw;
       height: 49vw;
-      z-index: 1000;
+      z-index: 1;
       right: 0;
-      background: url('../img/history_all.png') center center/cover no-repeat;
-      top: 33px;
+      background: url('../img/history_bg.png') center center/cover no-repeat;
+      top: 0;
     }
     .article_title {
       height: 972px;
-      h1 {
+      /*h1 {
         color: #D1CFD7;
-      }
+      }*/
 
       .article_title--text {
         display: block;
@@ -264,7 +364,7 @@
           display: block;
           position: absolute;
           z-index: 1000;
-          top: 120px;
+          top: 150px;
           width: 4px;
           height: 550px;
           background: linear-gradient(0deg, rgba(231, 59, 36, 0) 0%, #E73B24 100%);
@@ -354,27 +454,11 @@
 
   &_preparing {
     margin-top: 0;
-
-    .container {
-      height: 100%;
-      display: flex;
-      justify-content: flex-end;
-      flex-direction: column;
-    }
-
-    .article_title{
-      background: url("../img/prepare.png") no-repeat;
-      background-size: cover;
-      height: 91vh;
-      h1 {
-        color: #fff;
-        padding: 0;
-        margin-bottom: 30px;
-      }
-    }
+    background: url("../img/prepare.png");
   }
 
   &_base {
+    background: url("../img/base_bg.png");
     .article_title {
       height: auto;
       h1{
@@ -451,9 +535,9 @@
           margin: 0;
         }
 
-        .accent {
+        /*.accent {
           font-size: 36px;
-        }
+        }*/
       }
 
       &.base_grid {
@@ -478,23 +562,10 @@
 
   &_building {
     margin-top: 0;
+    background: url("../img/building.png") no-repeat center;
 
-    .article_title{
-      background: url("../img/building.png") no-repeat center;
-      background-size: cover;
-      height: 115vh;
-      color: #F7F7FA;
-      h1 {
-        margin-bottom: 50px;
-        color: #F7F7FA;
-        text-shadow: 0px 16px 16px rgba(50, 50, 71, 0.08), 0px 24px 32px rgba(50, 50, 71, 0.08);
-        padding: 200px 0 0;
-      }
-      &--text {
-        position: relative;
-        font-size: 25px;
-        max-width: 702px;
-      }
+    .article_title--text {
+      max-width: 702px;
     }
   }
 
@@ -602,6 +673,41 @@
         font-size: 22px;
         color: #232326;
       }
+    }
+  }
+
+  &_burovie {
+    background: url("../img/burovie_bg.png");
+  }
+
+  .burovie-grid {
+    padding: 0 113px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 100px 143px;
+
+    &__element {
+      padding: 15px;
+      background: #FFFFFF;
+      box-shadow: 0px 12px 12px rgba(50, 50, 71, 0.08), 0px 16px 24px rgba(50, 50, 71, 0.08);
+    }
+
+    &__title {
+      display: block;
+      margin-top: 25px;
+      margin-bottom: 22px;
+      padding-right: 19px;
+      padding-left: 19px;
+      font-size: 30px;
+      color: #4E4E53;
+    }
+
+    &__desc {
+      font-size: 24px;
+      color: #77767E;
+      padding-right: 19px;
+      padding-left: 19px;
+      padding-bottom: 50px;
     }
   }
 }

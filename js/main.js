@@ -24,3 +24,7 @@ window.addEventListener('scroll', checkPosition);
 toTopButton.onclick = function () {
     toTop();
 }
+
+Fancybox.bind("[data-fancybox='gallery']", {
+    // Your options go here
+});

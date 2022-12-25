@@ -28,3 +28,8 @@ toTopButton.onclick = function () {
 Fancybox.bind("[data-fancybox='gallery']", {
     // Your options go here
 });
+
+
+Fancybox.bind("[data-fancybox='video']", {
+    // Your options go here
+});
